@@ -2,21 +2,40 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    /* align-items: flex-end; */
     margin: 0 auto;
     width: 1260px;
+    font-family: 'News Cycle', sans-serif;
+    color: #4bd5ee;
+        object-fit: contain;
+
+
 }
 
 img {
+    /* display: flex; */
+    /* align-self: baseline; */
     max-height: 90%;
-    padding: 10px;
+    max-width: 90%;
+    object-fit: contain;
+    /* padding: 10px; */
+    /* margin: 10px; */
+
 
 }
 
 .title {
-    text-align: center;
-    color: rgb(75, 213, 238)    ;
+    /* text-align: center;
+    /* justify-content: center;
+    display: flex; */
+    /* justify-content: center; */
+    color: #4bd5ee;
+    text-shadow: 0px 0px 3px lightblue;
     font-size: 300%;
-}
+    font-family: 'News Cycle', sans-serif;
+    font-weight: 400;
+    line-height: 1.35;
+  }
 
 .flip-card {
     background-color: transparent;
@@ -24,7 +43,7 @@ img {
     height: 400px;
     margin: 10px;
     text-align: center;
-    /* border: 1px solid #f1f1f1; */
+    /* border: 1px solid #e0d8d8; */
     perspective: 1000px;
   }
   
@@ -52,15 +71,17 @@ img {
   .flip-card-front {
     color: white;
     border: solid 2px gold;
+    box-shadow: 0px 0px 10px yellow;
     border-radius: 5px;
-    background-color: black;
+    background-color: transparent;
   }
   
   .flip-card-back {
-    background-color: black;
-    color: white;
-    border-radius: 5px;
+    background-color: transparent;
+    color: gold;
+    border-radius: 5p;
     transform: rotateY(180deg);
+    font-size: 12px;
   }
 
   body {

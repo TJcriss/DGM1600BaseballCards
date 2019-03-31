@@ -48,10 +48,11 @@ people.forEach((person) => {
     imageElement.src = person.image
     planetElement.textContent = `Homeworld: ${person.homeworld}`
     speciesElement.textContent = `Species: ${person.species}`
-    heightElement.textContent = `Height: ${person.height}`
+    heightElement.textContent = `Height: ${person.height}m`
     skinElement.textContent = `Skin Color: ${person.skinColor}`
     genderElement.textContent = `Gender: ${person.gender}`
     eyeElement.textContent = `Eye Color: ${person.eyeColor}`
+
 
     cardElement.appendChild(innerElement)
     innerElement.appendChild(frontElement)
