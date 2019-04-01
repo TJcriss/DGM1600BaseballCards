@@ -31,12 +31,14 @@ people.forEach((person) => {
     let frontElement = document.createElement('div')
     let backElement = document.createElement('div')
     let imageElement = document.createElement('img')
-    let planetElement = document.createElement('h1')
-    let speciesElement = document.createElement('h1')
-    let heightElement = document.createElement('h1')
-    let skinElement = document.createElement('h1')
-    let eyeElement = document.createElement('h1')
-    let genderElement = document.createElement('h1')
+    let nameElement = document.createElement('h1')
+
+    let planetElement = document.createElement('h2')
+    let speciesElement = document.createElement('h2')
+    let heightElement = document.createElement('h2')
+    let skinElement = document.createElement('h2')
+    let eyeElement = document.createElement('h2')
+    let genderElement = document.createElement('h2')
 
 
 
@@ -44,8 +46,9 @@ people.forEach((person) => {
     innerElement.className = 'flip-card-inner'
     frontElement.className = 'flip-card-front'
     backElement.className = 'flip-card-back'
-    frontElement.textContent = person.name
+    frontElement.box = person.name
     imageElement.src = person.image
+    nameElement.textContent = person.name
     planetElement.textContent = `Homeworld: ${person.homeworld}`
     speciesElement.textContent = `Species: ${person.species}`
     heightElement.textContent = `Height: ${person.height}m`
@@ -58,6 +61,7 @@ people.forEach((person) => {
     innerElement.appendChild(frontElement)
     innerElement.appendChild(backElement)
     frontElement.appendChild(imageElement)
+    frontElement.appendChild(nameElement)
     backElement.appendChild(planetElement)
     backElement.appendChild(speciesElement)
     backElement.appendChild(heightElement)
