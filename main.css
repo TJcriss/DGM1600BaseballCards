@@ -43,21 +43,23 @@ img {
 button {
   position: fixed;
   top: 10px;
-  right: 25px;
+  right: 50px;
   font-size: 20px;
   color: #9effff;
   text-shadow: 2px 0px 3px lightblue;
   z-index: auto;
-  /* background-color: rgb(255, 255, 255, 0.5); */
-
   padding:1%;
   max-width:200px;
-  background: rgba(9, 19, 168, 0.3);
-  border:solid 1px #9effff; 
+  background: rgba(10, 20, 170, 0.3);
+  border:solid 2px #9effff; 
   border-radius:10px;
   transform:rotateX(30deg);
-
   box-shadow: -2px 0px 5px lightblue;
+}
+
+button:hover {
+  border:solid 2px #4bd5ee;
+  color: #4bd5ee;
 }
 
 .title {
