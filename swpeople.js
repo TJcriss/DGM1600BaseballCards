@@ -34,44 +34,15 @@ function createCard(){
   console.log("CREATE CARD FIRED");
   var person = {
     "id": counter,
-    "name": "Faker McFakerson",
-    "height": 1.72,
-    "mass": 73,
-    "gender": "male",
-    "homeworld": "tatooine",
-    "wiki": "http://starwars.wikia.com/wiki/Luke_Skywalker",
-    "image": "https://vignette.wikia.nocookie.net/starwars/images/2/20/LukeTLJ.jpg",
-    "born": -19,
-    "bornLocation": "polis massa",
-    "died": 34,
-    "diedLocation": "ahch-to",
-    "species": "human",
-    "hairColor": "blond",
-    "eyeColor": "blue",
-    "skinColor": "light",
-    "cybernetics": "Prosthetic right hand",
-    "affiliations": [
-      "Alliance to Restore the Republic",
-      "Red Squadron",
-      "Rogue Squadron",
-      "Massassi Group",
-      "Leia Organa's team",
-      "Endor strike team",
-      "Jedi Order",
-      "Bright Tree tribe",
-      "New Republic",
-      "Resistance"
-    ],
-    "masters": [
-      "Obi-Wan Kenobi",
-      "Yoda"
-    ],
-    "apprentices": [
-      "Leia Organa",
-      "Ben Solo (along with a dozen apprentices)",
-      "Rey"
-    ],
-    "formerAffiliations": []
+    "name": "",
+    "height": "0",
+    "gender": "",
+    "homeworld": "",
+    "image": "https://cdn0.iconfinder.com/data/icons/famous-characters-add-on-vol-2-glyph/48/Sed-22-512.png",
+    "hairColor": "",
+    "species": "",
+    "eyeColor": "",
+    "skinColor": "",
   };
   console.log({people});
   displayPeople(person);
@@ -93,10 +64,11 @@ function displayPeople(person) {
 
     let planetElement = document.createElement('h2')
     let speciesElement = document.createElement('h2')
+    let genderElement = document.createElement('h2')
     let heightElement = document.createElement('h2')
     let skinElement = document.createElement('h2')
     let eyeElement = document.createElement('h2')
-    let genderElement = document.createElement('h2')
+    let hairElement = document.createElement('h2')
 
     cardElement.className = 'flip-card'
     innerElement.className = 'flip-card-inner'
@@ -108,10 +80,11 @@ function displayPeople(person) {
     nameElement.textContent = person.name
     planetElement.textContent = `Homeworld: ${person.homeworld}`
     speciesElement.textContent = `Species: ${person.species}`
+    genderElement.textContent = `Gender: ${person.gender}`
     heightElement.textContent = `Height: ${person.height}m`
     skinElement.textContent = `Skin Color: ${person.skinColor}`
-    genderElement.textContent = `Gender: ${person.gender}`
     eyeElement.textContent = `Eye Color: ${person.eyeColor}`
+    hairElement.textContent = `Hair Color: ${person.hairColor}`
 
     cardElement.appendChild(innerElement)
     innerElement.appendChild(frontElement)
@@ -120,10 +93,11 @@ function displayPeople(person) {
     frontElement.appendChild(nameElement)
     backElement.appendChild(planetElement)
     backElement.appendChild(speciesElement)
+    backElement.appendChild(genderElement)
     backElement.appendChild(heightElement)
     backElement.appendChild(skinElement)
-    backElement.appendChild(genderElement)
     backElement.appendChild(eyeElement)
+    backElement.appendChild(hairElement)
 
     mainContainer.appendChild(cardElement)
 }
