@@ -1,4 +1,4 @@
-import { people } from './api.js'
+import { people } from '../data/api.js'
 
 const mainContainer = document.createElement('div')
 mainContainer.className = 'container'
